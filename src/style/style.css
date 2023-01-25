@@ -1,0 +1,87 @@
+/*reset*/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+/*piano design*/
+#piano {
+  background-color: rgb(34, 34, 73);
+  position: relative;
+  max-width: 992px;
+  width: 85%;
+  height: 290px;
+  margin: 80px auto;
+  border-radius: 10px;
+  padding: 90px 20px 0;
+}
+
+#piano .logo {
+  width: 200px;
+  position: absolute;
+  top: 23px;
+}
+
+#piano .keys {
+  background-color: #040404;
+  width: 100%;
+  max-width: 949px;
+  height: 180px;
+  position: relative;
+  overflow: hidden;
+  padding-left: 2px;
+}
+
+#piano .keys .key {
+  flex: 1;
+  width: 41px;
+  height: 175px;
+  margin: 2px;
+  background-color: #ffffff;
+  float: left;
+  position: relative;
+  border-radius: 0 0 3px 3px;
+}
+
+#piano .keys .key.black--key:after {
+  content: "";
+  width: 32px;
+  height: 100px;
+  background-color: #202020;
+  position: absolute;
+  left: -18px;
+  top: 0;
+  border-radius: 0 0 3px 3px;
+}
+
+/*media queries*/
+/*small devices*/
+@media (max-width: 768px) {
+  #piano {
+    width: 358px;
+  }
+
+  #piano .keys {
+    width: 318px;
+  }
+
+  #piano .logo {
+    width: 150px;
+  }
+}
+
+/*medium devices*/
+@media (min-width: 769px) and (max-width: 1199px) {
+  #piano {
+    width: 675px;
+  }
+
+  #piano .keys {
+    width: 633px;
+  }
+}
